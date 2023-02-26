@@ -1,0 +1,12 @@
+docker run \
+-d \
+--name plex-official \
+--network=host \
+-e TZ="PST" \
+-e PLEX_CLAIM="claim-jzPVP-R1tQECU6Ewcs2y" \
+-v /home/plex1/config:/config \
+-v /home/plex1/transcode:/transcode \
+-v /home/plex/:/data \
+-e PLEX_UID=0 \
+-e PLEX_GID=0 \
+plexinc/pms-docker

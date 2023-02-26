@@ -1,0 +1,21 @@
+Install Docker:
+curl -fsSL https://get.docker.com -o get-docker.sh
+chmod +x get-docker.sh
+./get-docker.sh
+
+#Install docker compose (not actually needed): 
+#curl -SL https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+
+install apparmor utils/clear apparmor profiles (turnkey exclusive)
+apt-get purge apparmor -y
+apt-get purge apparmor-profiles 
+apt-get purge apparmor-utils
+apt-get install apparmor-utils -y
+apt install apparmor-profiles apparmor-profiles-extra vim-addon-manager -y
+reboot
+
+#!/bin/bash
+apt install curl -y
+curl -fsSL https://get.docker.com -o get-docker.sh
+chmod +x get-docker.sh
+./get-docker.sh
