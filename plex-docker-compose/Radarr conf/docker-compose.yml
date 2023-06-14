@@ -4,13 +4,13 @@ services:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=PST
+      - PUID=0
+      - PGID=0
+      - TZ=America/Los_Angeles
     volumes:
-      - /home/radarr/config:/config
-      - /home/plex/movies:/movies #optional
-      - /home/deluge/downloads:/downloads
+      - /home/radarr:/config
+      - /mnt/plex/movies:/movies #optional
+      - /mnt/downloads:/downloads
     ports:
       - 7878:7878
     restart: unless-stopped

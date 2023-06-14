@@ -1,5 +1,5 @@
 ---
-version: "2.1"
+version: "3"
 services:
   overseerr:
     image: lscr.io/linuxserver/overseerr:latest
@@ -9,7 +9,7 @@ services:
       - PGID=0
       - TZ=America/Los_Angeles
     volumes:
-      - /home/overseer/config:/config
+      - /home/overseer:/config
     ports:
       - 5055:5055
     restart: unless-stopped

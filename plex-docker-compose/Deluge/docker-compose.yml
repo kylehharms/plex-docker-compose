@@ -10,7 +10,7 @@ services:
       - DELUGE_LOGLEVEL=error #optional
     volumes:
       - /home/deluge:/config
-      - /home/deluge/downloads:/downloads
+      - /mnt/downloads:/downloads
     ports:
       - 8112:8112
       - 6881:6881
